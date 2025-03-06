@@ -1,17 +1,18 @@
 package dates_module;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class DatesInJava {
 	
-	public static void main(String[] args) {
+	public static void main(String[] args) throws ParseException {
 		
 		Date date = new Date();
 		
 		// milliseconds that represent a current date
 		System.out.println("Date in milliseconds: " + date.getTime());
-		
-		
+				
 		/* deprecated methods */
 		
 		// day of Month
@@ -34,6 +35,16 @@ public class DatesInJava {
 		
 		
 		
+		/*----------------- Simple Date Format -------------------------*/
+		System.out.println("-------------------------------------------------");
+		
+		SimpleDateFormat simpleDateFormat = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
+		System.out.println("Date to show on screen: " + simpleDateFormat.format(date));
+		
+		simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+		System.out.println("Date to database format: " + simpleDateFormat.format(date));
+		
+		System.out.println(simpleDateFormat.parse("1985-10-20 23:25:00"));
 		
 	}
 }
