@@ -2,6 +2,7 @@ package dates_module;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.Date;
 
 public class DatesInJava {
@@ -44,8 +45,27 @@ public class DatesInJava {
 		simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
 		System.out.println("Date to database format: " + simpleDateFormat.format(date));
 		
+		// to date object
 		System.out.println(simpleDateFormat.parse("1985-10-20 23:25:00"));
 		
+		
+		/*----------------------- Calendar ------------------------------------*/
+		System.out.println("-------------------------------------------------");
+		System.out.println("");
+		
+		Calendar calendar = Calendar.getInstance();
+		
+		System.out.println("Calendar [Day of the month]: " + calendar.get(Calendar.DAY_OF_MONTH));
+		System.out.println("Calendar [Day of the week]: " + calendar.get(Calendar.DAY_OF_WEEK));
+		System.out.println("Calendar [Time of day]: " + calendar.get(Calendar.HOUR_OF_DAY));
+		System.out.println("Calendar [Minutes of hours]: " + calendar.get(Calendar.MINUTE));
+		System.out.println("Calendar [Seconds of hours]: " + calendar.get(Calendar.SECOND));
+		System.out.println("Calendar [Year]: " + calendar.get(Calendar.YEAR));
+		
+		simpleDateFormat = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
+		
+		System.out.println("Calendar object date on SimpleDateFormat object format: " 
+				+ simpleDateFormat.format(calendar.getInstance().getTime()));
 	}
 }
  
