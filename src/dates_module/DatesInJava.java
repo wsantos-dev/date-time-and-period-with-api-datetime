@@ -55,16 +55,23 @@ public class DatesInJava {
 		
 		Calendar calendar = Calendar.getInstance();
 		
-		System.out.println("Calendar [Day of the month]: " + calendar.get(Calendar.DAY_OF_MONTH));
-		System.out.println("Calendar [Day of the week]: " + calendar.get(Calendar.DAY_OF_WEEK));
-		System.out.println("Calendar [Time of day]: " + calendar.get(Calendar.HOUR_OF_DAY));
-		System.out.println("Calendar [Minutes of hours]: " + calendar.get(Calendar.MINUTE));
-		System.out.println("Calendar [Seconds of hours]: " + calendar.get(Calendar.SECOND));
-		System.out.println("Calendar [Year]: " + calendar.get(Calendar.YEAR));
+		System.out.println("Calendar [Day of the month]: " 
+				+ calendar.get(Calendar.DAY_OF_MONTH));
+		System.out.println("Calendar [Day of the week]: " 
+				+ calendar.get(Calendar.DAY_OF_WEEK));
+		System.out.println("Calendar [Time of day]: " 
+				+ calendar.get(Calendar.HOUR_OF_DAY));
+		System.out.println("Calendar [Minutes of hours]: " 
+				+ calendar.get(Calendar.MINUTE));
+		System.out.println("Calendar [Seconds of hours]: " 
+				+ calendar.get(Calendar.SECOND));
+		System.out.println("Calendar [Year]: " 
+				+ calendar.get(Calendar.YEAR));
 		
 		simpleDateFormat = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
 		
-		System.out.println("Calendar object date on SimpleDateFormat object format: " 
+		System.out.println("Calendar object date on " + 
+				"SimpleDateFormat object format: " 
 				+ simpleDateFormat.format(calendar.getInstance().getTime()));
 	}
 }
